@@ -38,7 +38,7 @@ doctor() {
     fail "MLflow is not running — run: ./workshop start"
   fi
 
-  if curl -fsS http://127.0.0.1:8317/v1/models -H "Authorization: Bearer 123456" >/dev/null 2>&1; then
+  if curl -fsS http://172.21.112.1:8317/v1/models -H "Authorization: Bearer 123456" >/dev/null 2>&1; then
     pass "Workshop model endpoint is reachable"
   else
     fail "Model endpoint is unavailable at http://127.0.0.1:8317/v1"
